@@ -1,0 +1,1530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kyzryzz Hayanasi - Websitex</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" href="https://raw.githubusercontent.com/furinnTeam/tmp/refs/heads/main/ofc-logo(without_bg).png" type="image/png">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script>
+        Prism.plugins.autoloader.languages_path = 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/';
+        Prism.plugins.autoloader.use_minified = true;
+    </script>
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html {
+  scroll-behavior: smooth;
+}
+  body {
+    font-family: monospace;
+    text-align: center;
+    background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
+    color: #000;
+    margin: 0;
+    padding: 2rem;
+  }
+    #scrollTop {
+      position: fixed;
+      padding: 0.5rem 1rem;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      margin: 0.5rem;
+      box-shadow: 4px 4px #000;
+      bottom: 90px;
+      right: 20px;
+      display: none;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      font-size: 24px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      z-index: 1000;
+    }
+    #scrollTop:hover {
+      background-color: #2980b9;
+    }
+       .marquee {
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 0.5rem 1rem;
+            border-radius: 0.1rem;
+            width: 100%;
+            background-color: orange;
+            padding: 1px;
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+            font-size: 22px;
+            letter-spacing: 1px;
+            font-weight: bold;
+            z-index: 9999;
+       }
+       
+       img {
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+}
+
+.button,
+.blue-,
+.orange-,
+.project-card,
+.tag,
+input[type="text"],
+button,
+label {
+  transition: none;
+}
+
+.button:active,
+.blue-:active,
+.orange-:active,
+.project-card:active,
+.tag:active,
+input[type="text"]:active,
+button:active,
+label:active {
+  transform: scale(0.95);
+  box-shadow: 1px 1px #000;
+}
+.project-card:active { transform: scale(1); }
+
+  .button {
+    border: 1px solid #000;
+    padding: 1rem;
+    margin: 1rem auto;
+    display: block;
+    text-align: left;
+    box-shadow: 4px 4px #000;
+    padding: 0.5rem 1rem;
+    border: 1px solid #000;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .blue-,
+  .orange- {
+    border: 1px solid #000;
+    padding: 1rem;
+    margin: 1rem auto;
+    display: block;
+    text-align: left;
+    box-shadow: 4px 4px #000;
+    padding: 0.5rem 1rem;
+    border: 1px solid #000;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-weight: bold;
+    }
+    .blue- { background-color: #a3dbe8; }
+    .orange- { background-color: #f5c369; }
+
+  .red-box,
+  .white-box,
+  .pink-box,
+  .gray-box,
+  .blue-box,
+  .purple-box,
+  .orange-box,
+  .choco-box,
+  .section,
+  .content-box,
+  .music-container,
+  .chat-box,
+  .profile
+  {
+    border-radius: 0.3rem;
+    border: 1px solid #000;
+    padding: 1rem;
+    margin: 1rem auto;
+    display: block;
+    text-align: left;
+    box-shadow: 4px 4px #000;
+    background-color: #fff;
+  }
+ 
+    @media (min-width: 768px) {
+    .red-box,
+    .white-box,
+    .pink-box,
+    .gray-box,
+    .blue-box,
+    .orange-box,
+    .purple-box,
+    .section,
+    .content-box,
+    .top-marquee,
+    .profile {
+      max-height: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  .music-container { background-color: #d0d6a6; text-align: center }
+  .gray-box { background-color: #a0a0a0; }
+  .blue-box { background-color: #a3dbe8; }
+  .orange-box { background-color: #f5c369; }
+  .red-box { background-color: #fcdede; }
+  .purple-box { background-color: #aa96ce; }
+  .choco-box { background-color: #cf9c73; }
+  .content-box { background-color: #7ac87b; }
+
+.profile { text-align: center; }
+
+.profile img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+.profile-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-decoration: underline;
+}
+
+.typewriter-text {
+  display: inline-block;
+  border-right: 2px solid #000;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 4s steps(40, end), blink 0.75s step-end infinite;
+  font-size: 1rem;
+  min-height: 24px;
+}
+
+@keyframes typing {
+  0% { width: 0; }
+  50% { width: 100%; }
+  75% { width: 100%; }
+  100% { width: 0; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.tag-box {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.tag {
+  font-weight: 750;
+  background-color: #cce4f6;
+  color: #000;
+  padding: 0.3rem 0.7rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  border: 1px solid #000;
+  box-shadow: 4px 4px #000;
+}
+
+  .pink-box {
+    background-color: #f7bfc6;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .label { font-weight: bold; margin-top: 2rem; }
+
+  .link {
+    color: #000;
+  }
+
+  .section-title {
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .skill-item, .hobby-item {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+    gap: 0.5rem;
+  }
+
+  .skill-icon, .hobby-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 0.5rem;
+  }
+
+  .progress-bar {
+    background: #eee;
+    flex-grow: 1;
+    height: 10px;
+    border: 1px solid #000;
+    position: relative;
+  }
+
+  .progress {
+    background: #a3dbe8;
+    height: 100%;
+  }
+
+  .label-text {
+    text-decoration: underline;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+  }
+
+.journey-title {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.timeline-item {
+  padding: 1rem;
+  border-left: 4px solid #3498db;
+  background: #f0f4f8;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: #3498db;
+  border-radius: 50%;
+  position: absolute;
+  left: -8px;
+  top: 1.2rem;
+}
+
+.timeline-item .year {
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.timeline-item .desc {
+  font-size: 0.9rem;
+}
+
+.timeline-item .desc small {
+  display: block;
+  font-size: 0.75rem;
+  color: #555;
+  margin-top: 0.2rem;
+}
+
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .project-card {
+    border: 1px solid #000;
+    box-shadow: 4px 4px #000;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    background-color: #f2f2f2;
+  }
+
+  .project-card img {
+    width: 100%;
+    aspect-ratio: 6 / 3;
+    object-fit: cover;
+    border: 1px solid #000;
+  }
+
+    .music-container img {
+      width: 100%;
+      border-radius: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .music-title-wrapper {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      height: 1.5rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .music-title {
+      font-weight: bold;
+      font-size: 1.1rem;
+      white-space: nowrap;
+      position: absolute;
+      left: 0;
+      will-change: transform;
+    }
+
+    .music-author {
+      font-size: 0.85rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .controls button {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: #000;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .controls button:hover {
+      transform: scale(1.2);
+      color: #000;
+    }
+
+    .mode-controls {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .mode-controls button {
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      color: #64748b;
+      cursor: pointer;
+    }
+
+    .mode-controls button.active {
+      color: #000;
+    }
+
+    audio {
+      width: 100%;
+    }
+
+    .track-counter {
+      font-size: 0.8rem;
+      color: #333;
+      margin-top: 0.5rem;
+    }
+
+  .chat-log {
+    overflow-y: auto;
+    margin-bottom: 1rem;
+    border: 1.5px solid #000000;
+    padding: 0.5rem;
+    background: #fff;
+    font-size: 1rem;
+  }
+
+  .chat-log .message {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+
+pre.code-block {
+  position: relative;
+  background-color: #1e1e1e;
+  padding: 1.5rem 1rem 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+.copy- {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  z-index: 2;
+}
+.copy-:hover {
+  color: #4ade80;
+}
+
+
+  .message .bubble {
+    padding: 0.75rem 1rem;
+    border-radius: 0.3rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .message.user .bubble {
+    background-color: #469900;
+    text-align: right;
+    color: #ffffff;
+  }
+
+  .message.ai .bubble {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    text-align: left;
+  }
+
+  .message.error .bubble {
+    background: #fee2e2;
+    color: #b91c1c;
+  }
+
+  .message.loading .bubble {
+    background: #fde68a;
+    color: #92400e;
+    opacity: 0.8;
+  }
+
+  .chat-input {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  .chat-input input[type="text"] {
+    flex: 1;
+    padding: 0.5rem;
+    border: 2px solid #000;
+    border-radius: 0.3rem;
+  }
+  .chat-input input[type="file"] {
+    display: none;
+  }
+  .chat-input button,
+  .chat-input label {
+    background-color: #f5c369;
+    border: 1px solid #000;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 2px 2px #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .chat-input label i {
+    font-size: 1rem;
+  }
+  #imagePreview {
+    max-width: 150px;
+    max-height: 150px;
+    margin-top: 0.5rem;
+    border: 2px solid #000;
+    border-radius: 0.3rem;
+    display: none;
+  }
+
+#welcomeModal {
+  position: fixed;
+  top: 500px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet);
+  background-size: 1400% 1400%;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+  font-size: 40px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  animation: fadeInOut 5s ease-in-out forwards, rainbowBG 10s ease infinite;
+    }
+    
+    .blurred {
+      filter: blur(5px);
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .modal-content {
+      background: white;
+      padding: 20px 30px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .hidden {
+      display: none;
+    }
+    
+    .globe {
+      font-size: 4rem;
+      color: #3498db;
+      animation: spin 3s linear infinite;
+      margin-bottom: 1rem;
+    }
+    @keyframes spin {
+      from { transform: rotate(0deg);}
+      to { transform: rotate(360deg);}
+    }
+
+    @keyframes fadeInOut {
+  0% { opacity: 0; transform: translateX(-50%) translateY(-20px); }
+  10% { opacity: 1; transform: translateX(-50%) translateY(0); }
+  90% { opacity: 1; transform: translateX(-50%) translateY(0); }
+  100% { opacity: 0; transform: translateX(-50%) translateY(-20px); 
+  }
+}
+  .popup-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 9999;
+  }
+
+  .popup {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.4rem;
+    color: #fff;
+    font-weight: bold;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    animation: fadePopup 3s ease forwards;
+    font-size: 1rem;
+  }
+
+  .popup.success {
+    background-color: #28a745; /* green */
+  }
+
+  .popup.error {
+    background-color: #dc3545; /* red */
+  }
+
+  .popup i {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+  }
+
+  @keyframes fadePopup {
+    0% { opacity: 0; transform: translateY(20px); }
+    10% { opacity: 1; transform: translateY(0); }
+    90% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(20px); }
+  }
+
+  #resetChat {
+    margin-top: 1rem;
+    background-color: #fcd34d;
+    border: 1px solid #000;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    font-weight: bold;
+    box-shadow: 1px 0px #000;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+}
+.footer-left b {
+  display: flex;
+  font-size: 500;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  gap: 0.2rem;
+}
+.footer-right b {
+  display: flex;
+  font-size: 500;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  gap: 0.2rem;
+}
+
+  .footer-right a.link {
+    margin: 0 0.3rem;
+  }
+
+footer i,
+footer svg,
+.footer-left i,
+.footer-right i,
+.footer-left svg,
+.footer-right svg {
+  color: #000 !important;
+  fill: #000 !important;
+}
+
+.footer-right a.link:hover {
+  text-decoration: underline;
+}
+
+</style>
+
+</head>
+<body>
+  <div class="marquee">
+    <marquee behavior="scroll" direction="left">Kyzryzz Hayanasi</marquee>
+  </div>
+<div id="profile" class="profile">
+  <img src="https://files.catbox.moe/e2m3mw.jpg" alt="Profile Picture">
+  <div class="profile-title">Kyzryzz Hayanasi</div>
+  <div class="typewriter-text" id="typewriter"></div>
+  <div class="tag-box">
+    <div class="tag">Ngoding</div><div class="tag">Anime</div><div class="tag">Game</div><div class="tag">Musik</div><div class="tag">Turu</div>
+  </div>
+</div>
+  <div id="about" class="blue-box">
+<div class="section-title">ABOUT</div>
+    <p>Halo! Saya Kyzryzz Hayanasi, biasa dipanggil Ky. saya seorang kreator digital yang suka membangun hal hal baru.</p>
+  </div>
+  <div id="project" class="orange-box">
+    <div class="section-title">PROJECT</div>
+    <div class="projects">
+      <div class="project-card">
+        <img src="https://qu.ax/EscQD.jpg" alt="Project Image">
+        <h3 style="text-decoration: underline;">Furina Assistant - WhatsApp Bot</h3></p>
+        <p>System WhatsApp otomatis (bot WhatsApp) multifungsi. dengan dilengkapi banyak fitur-fitur canggih dan menarik!</p>
+        <a href="https://whatsapp.com/channel/0029VaRI1OB2P59cTdJKZh3q"><button class="blue-">Coba</button></a>
+      </div>
+      <div class="project-card">
+        <img src="https://qu.ax/vJdbB.jpg" alt="Project Image">
+        <h3 style="text-decoration: underline;">Furina AI - Meta AI System</h3></p>
+        <p>Furina AI adalah AI canggih dengan integrasi API Oleh WhatsApp team META AI.</p>
+        <a href="https://wa.me/ais/1116212807046181?s=5"><button class="blue-">Coba</button></a>
+      </div>
+      <div class="project-card">
+        <img src="https://qu.ax/chrWQ.jpg" alt="Project Image">
+        <h3 style="text-decoration: underline;">Gallery Photo</h3></p>
+        <p>Website gallery untuk kenangan maupun foto foto terbaikmu.</p>
+        <a href="https://wife-kyzryzz.vercel.app"><button class="blue-">Preview</button></a>
+        <a href="https://github.com/kyzryzz/listwife"><button class="orange-" style="background-color: #cfa573">Source</button></a>
+      </div>
+      <div class="project-card">
+        <img src="https://qu.ax/iQfPx.jpg" alt="Project Image">
+        <h3 style="text-decoration: underline;">APIs - AI Chat Furina</h3></p>
+        <p>AI Docs untuk Furina, dilengkapi dengan respons secara realtime.</p>
+        <a href="https://ai.furina.cyou/api/chat?content=Hai&user=user"><button class="blue-">Coba</button></a>
+      </div>
+    </div>
+  </div>
+  
+<div id="skills" class="content-box">
+  <div class="section-title">Tech Stack - Hobbies</div>
+  <div class="label-text">Skills</div>
+  <div class="skill-item">
+    <div class="skill-label"><i class="fab fa-js skill-icon"></i>JavaScript
+    </div>
+    <div class="progress-bar"><div class="progress" style="width: 60%"></div></div>
+  </div>
+  <div class="skill-item">
+    <div class="skill-label"><i class="fab fa-python skill-icon"></i>Python
+    </div>
+    <div class="progress-bar"><div class="progress" style="width: 20%"></div></div>
+  </div>
+  <div class="skill-item">
+    <div class="skill-label"><i class="fab fa-css3-alt skill-icon"></i>CSS3</div>
+    <div class="progress-bar"><div class="progress" style="width: 30%"></div></div>
+  </div>
+  <div class="skill-item">
+    <div class="skill-label"><i class="fab fa-html5 skill-icon"></i>HTML5</div>
+    <div class="progress-bar"><div class="progress" style="width: 50%"></div></div>
+  </div>
+  <div class="skill-item">
+    <div class="skill-label"><i class="fab fa-node-js skill-icon"></i>NodeJS</div>
+    <div class="progress-bar"><div class="progress" style="width: 25%"></div></div>
+  </div>
+
+  <div class="label-text">Hobbies</div>
+  <div class="hobby-item">
+    <div class="hobby-label"><i class="fas fa-gamepad hobby-icon"></i>Gaming</div>
+    <div class="progress-bar"><div class="progress" style="width: 98%"></div></div>
+  </div>
+  <div class="hobby-item">
+    <div class="hobby-label"><i class="fas fa-code hobby-icon"></i>Ngoding</p>(copas)</div>
+    <div class="progress-bar"><div class="progress" style="width: 45%"></div></div>
+    </div>
+  <div class="hobby-item">
+    <div class="hobby-label"><i class="fas fa-video hobby-icon"></i>Anime</div>
+    <div class="progress-bar"><div class="progress" style="width: 95%"></div></div>
+    </div>
+  <div class="hobby-item">
+    <div class="hobby-label"><i class="fas fa-headphones hobby-icon"></i>Musik</div>
+    <div class="progress-bar"><div class="progress" style="width: 70%"></div></div>
+    </div>
+    </div></div>
+  </div>
+</div>
+
+<div id="journey" class="choco-box">
+  <h2 class="section-title">Journey</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="year">2022</div>
+      <div class="desc">Tertarik dengan teknologi aplikasi<br><small>17 Juni 2022</small></div>
+    </div>
+    <div class="timeline-item">
+      <div class="year">2022</div>
+      <div class="desc">Mulai tertarik mempelajari bot WhatsApp<br><small>25 November 2022</small></div>
+    </div>
+    <div class="timeline-item">
+      <div class="year">2023</div>
+      <div class="desc">Mulai belajar bahasa pemrograman bot WhatsApp (JavaScript)<br><small>5 Januari 2023</small></div>
+    </div>
+    <div class="timeline-item">
+      <div class="year">2023</div>
+      <div class="desc">Belajar secara otodidak tentang bot<br><small>11 Maret 2023</small></div>
+    </div>
+    <div class="timeline-item">
+      <div class="year">2023 - Sekarang</div>
+      <div class="desc">Mengembangkan bakat dalam teknologi bot WhatsApp<br><small>8 Juli 2023 - Present</small></div>
+    </div>
+    <div class="timeline-item">
+      <div class="year">2024</div>
+      <div class="desc">Mulai membuat API & mengupgrade bot dengan fitur dari developer hebat<br><small>19 Oktober 2024</small></div>
+    </div>
+    <div class="timeline-item">
+      <div class="year">2024 - Sekarang</div>
+      <div class="desc">Membuat website portofolio, AI Furina, galeri foto, API & AI system<br><small>2024 - Present</small></div>
+    </div>
+  </div>
+</div>
+
+    <div class="music-container">
+    <img id="musicThumb" src="" alt="Thumbnail">
+    <div class="music-title-wrapper"><div class="music-title" id="musicTitle">Judul Musik</div></div>
+    <div class="music-author" id="musicAuthor">Nama Artis</div>
+    <div class="mode-controls">
+      <button id="mode" title="Mode"><i class="fas fa-random"></i></button>
+    </div>
+    <div class="controls">
+      <button id="prev"><i class="fas fa-backward"></i></button>
+      <button id="playPause"><i class="fas fa-play"></i></button>
+      <button id="next"><i class="fas fa-forward"></i></button>
+    </div>
+    <audio id="audioPlayer" controls></audio>
+    <div class="track-counter" id="trackCounter">1/2</div>
+  </div>
+    
+  </div>
+<div id="chat" class="purple-box">
+  <div class="section-title">AI Chat</div>
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <span id="dateDisplay" style="font-weight: bold;"></span>
+    <span id="timeDisplay" style="font-weight: bold;"></span></div>
+    <div style="text-align: right; margin-top: 0.5rem;">
+     <button id="resetChat" onclick="confirmResetChat()" disabled style="opacity: 0.5; pointer-events: none; background-color: #ff4b4b;">
+  <i class="fas fa-trash-alt"></i>
+</button>
+  </div>
+  <div class="chat-log" id="chatLog"></div>
+  <div class="chat-input">
+    <input type="text" id="chatInput" placeholder="Tulis pesan ke Furina...">
+    <label for="imageInput"><i class="fas fa-image"></i></label>
+    <input type="file" id="imageInput" accept="image/*">
+    <button id="chatButton" onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+  </div>
+  <img id="imagePreview" src="" alt="Preview Gambar">
+</div>
+
+<div id="confirmResetModal" class="modal hidden">
+  <div class="modal-content" style="text-align: center;">
+    <p>Apakah kamu yakin ingin menghapus sesi chat ini?</p>
+    <p>Kamu akan memulai ulang sesi chat dari awal.</p>
+    <div style="margin-top: 1rem; display: flex; gap: 1rem; justify-content: center;">
+      <button onclick="resetChat()" style="background-color: #3b82f6; color: white; padding: 0.5rem 1rem; border: none; border-radius: 4px; box-shadow: 4px 4px #000; border-radius: 0.3rem; cursor: pointer; font-weight: bold;">Ya</button>
+      <button onclick="closeConfirmModal()" style="background-color: #ef4444; color: white; padding: 0.5rem 1rem; border: none; border-radius: 4px; font-weight: bold; box-shadow: 4px 4px #000; border-radius: 0.3rem; cursor: pointer; ">Gajadi</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-left">
+    <b style="font-size: 900; text-decoration: underline;">Kyzryzz Hayanasi</b>
+    </p>
+    <b>Alamat</b>
+    <p>Palembang, Sumatra Selatan, Indonesia</p>
+    <b>Tag</b>
+    <p>Web</p>
+  </div>
+  <div class="footer-right">
+    <p>
+      <b>Link Cepat</b>
+      <a class="link" href="#about">About</a> |
+      <a class="link" href="#">FAQ</a> |
+      <a class="link" href="#">Changelog</a>
+    </p>
+    <div class="footer-icons">
+      <a href="#" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" title="Discord"><i class="fab fa-discord"></i></a>
+      <a href="https://kyzryzz.t.me" title="Telegram"><i class="fab fa-telegram"></i></a>
+    </div>
+  </div>
+</footer>
+
+  <div id="loading-overlay" style="
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet);
+  background-size: 1400% 1400%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  animation: rainbowBG 10s ease infinite;
+"><i class="fas fa-globe globe"></i>
+</div>
+
+<div id="welcome-alert">
+<div id="welcomeModal">
+  <div id="blurred">
+    Youkoso.
+    </div>
+</div>
+  </div>
+  
+<button id="scrollTop" aria-label="Kembali ke atas" title="Kembali ke atas">
+    &#8679;
+  </button>
+  
+<div id="popupContainer" class="popup-container"></div>
+
+  <script>
+// PROFILE
+const phrases = [
+  "Ganteng :p",
+  "Suka Mie Ayam",
+  "Hanya Pemula Biasa",
+  "Npc yang Sedang Mencari Kebahagiaannya",
+  "Problem Solver",
+  "Tech Enthusiast"
+];
+
+const typer = document.getElementById("typewriter");
+let phraseIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function typeLoop() {
+  const currentPhrase = phrases[phraseIndex];
+  const displayed = isDeleting
+    ? currentPhrase.substring(0, charIndex--)
+    : currentPhrase.substring(0, charIndex++);
+
+  typer.textContent = displayed;
+  typer.style.borderRight = "2px solid black";
+
+  let delay = isDeleting ? 50 : 100;
+
+  if (!isDeleting && charIndex === currentPhrase.length + 1) {
+    delay = 1000;
+    isDeleting = true;
+  } else if (isDeleting && charIndex === 0) {
+    isDeleting = false;
+    phraseIndex = (phraseIndex + 1) % phrases.length;
+    delay = 500;
+  }
+
+  setTimeout(typeLoop, delay);
+}
+
+setTimeout(typeLoop, 500);
+
+// AUDIO PLAYER
+    const music = {
+      1: { 
+        title: "Calon Mantu Idaman (feat. Ncum)", 
+        author: "Rombongan Bodonk Koplo - Topic", 
+        thumb: "https://i.ytimg.com/vi/bGAmJJKEaQE/hq720.jpg",
+        url: "https://raw.githubusercontent.com/akiizryzz/s/refs/heads/main/mp3/Calon%20Mantu%20Idaman%20(feat.%20Ncum).mp3"
+      },
+      2: { 
+        title: "DJ THE SPECTRE JJ KANE SENSEI ALFIAN", 
+        author: "SENSEI ALFIAN",
+        thumb: "https://i.ytimg.com/vi/YnmRX5CQvLY/hq720.jpg",
+        url: "https://raw.githubusercontent.com/akiizryzz/s/refs/heads/main/mp3/DJ%20THE%20SPECTRE%20JJ%20KANE%20SENSEI%20ALFIAN.mp3" 
+        },
+      3: { 
+        title: "Dj Bangers",
+        author: "DJ Rizki YETE - Topic", 
+        thumb: "https://i.ytimg.com/vi/S18U-z1ONuI/hq720.jpg",
+        url: "https://raw.githubusercontent.com/akiizryzz/s/refs/heads/main/mp3/DJ%20Bangers.mp3" 
+      },
+      4: { 
+        title: "DJ LOST CONTROL X STUPID MY HEART", 
+        author: "Adnan YETE",
+        thumb: "https://i.ytimg.com/vi/vcgvEPpAH-A/hq720.jpg",
+        url: "https://raw.githubusercontent.com/akiizryzz/s/refs/heads/main/mp3/DJ%20LOST%20CONTROL%20X%20STUPID%20MY%20HEART%20(%20Slowed%20+%20Reverb%20).mp3" 
+        },
+      5: { 
+        title: "DJ SAD SOMETIMES REMIX",
+        author: "Dx Fvnky", 
+        thumb: "https://i.ytimg.com/vi/FIMaFC9TxC4/hqdefault.jpg", 
+        url: "https://raw.githubusercontent.com/akiizryzz/s/refs/heads/main/mp3/DJ%20SAD%20SOMETIMES%20REMIX.mp3" 
+        },
+      6: { 
+        title: "DJ HERO X SAD SOMETIMES JJ VIRAL TIKTOK", 
+        author: "CAHYA RIZKY",
+        thumb: "https://i.ytimg.com/vi/fQ1gHMhK6Es/hq720.jpg",
+        url: "https://raw.githubusercontent.com/akiizryzz/s/refs/heads/main/mp3/DJ%20HERO%20X%20SAD%20SOMETIMES%20JJ%20VIRAL%20TIKTOK%202025%20MENGKANE.mp3" 
+        },
+      7: {
+        title: "DJ HATE SABE MEURINDU", 
+        author: "Dj Chen - Topic",
+        thumb: "https://i.ytimg.com/vi/cBH-mcq0rII/hq720.jpg",
+        url: "https://raw.githubusercontent.com/akiizryzz/s/refs/heads/main/mp3/DJ%20HATE%20SABAE%20MERINDU.mp3"
+        },
+      8: {
+        title: "DJ Di Dunia Ini Tenang Aja",
+        author: "Ress Remix [YT]", 
+        thumb: "https://i.ytimg.com/vi/Ad03IKsu3sw/hq720.jpg",
+        url: "https://raw.githubusercontent.com/akiizryzz/s/refs/heads/main/mp3/DJ%20Di%20Dunia%20Ini%20Tenang%20Aja%20Mashup%20Breakbeat%20Full%20Bass%20Version%202024.mp3" 
+        },
+      9: { 
+        title: "DJ SA RINDU BREAKBEAT X BILANG PADA TUHANMU", 
+        author: "ᴡᴇꜱ. ᴛᴜʀᴜ",
+        thumb: "https://i.ytimg.com/vi/6SotKi4O9kM/hq720.jpg",
+        url: "https://raw.githubusercontent.com/akiizryzz/s/refs/heads/main/mp3/DJ%20SA%20RINDU%20BREAKBEAT%20X%20BILANG%20PADA%20TUHANMU%20NEWS%202025.mp3"
+        },
+      10: { 
+        title: "DJ The River Breakbeat Terbaru",
+        author: "Welof",
+        thumb: "https://i.ytimg.com/vi/u_hhkurDBD0/hq720.jpg",
+        url: "https://raw.githubusercontent.com/akiizryzz/s/refs/heads/main/mp3/DJ%20The%20River%20Breakbeat%20Terbaru.mp3"
+      },
+      11: {
+        title: "DJ BREAKBEAT BA PINJAM TAPE BARANG",
+        author: "ᴡᴇs. ᴢᴀɴ",
+        thumb: "https://i.ytimg.com/vi/mOo03_8X_ME/hq720.jpg",
+        url: "https://raw.githubusercontent.com/akiizryzz/s/refs/heads/main/mp3/DJ%20BREAKBEAT%20BA%20PINJAM%20TAPE%20BARANG.mp3"
+        },
+      12: {
+        title: "FLYSBR - Summer Melody (Phonk 2025)",
+        author: "Wanji Music",
+        thumb: "https://i.ytimg.com/vi/5rYoKqw3v-Y/hq720.jpg",
+        url: "https://raw.githubusercontent.com/akiizryzz/s/refs/heads/main/mp3/FLYSBR%20-%20Summer%20Melody%20(Phonk%202025).mp3"
+        },
+      13: {
+        title: "we can't be friends - ariana grande",
+        author: "Elstrax", 
+        thumb: "https://i.ytimg.com/vi/CQndY9q-BTw/hq720.jpg",
+        url: "https://raw.githubusercontent.com/akiizryzz/s/refs/heads/main/mp3/we%20cant%20be%20friends%20-%20ariana%20grande.mp3" 
+        },
+      14: {
+        title: "DJ Lost Control X Amor Prohibido",
+        author: "Dinskie",
+        thumb: "https://i.ytimg.com/vi/ZnLuqL2poBc/hq720.jpg",
+        url: "https://raw.githubusercontent.com/akiizryzz/s/refs/heads/main/mp3/DJ%20Lost%20Control%20X%20Amor%20Prohibido.mp3"
+        },
+      15: {
+        title: "",
+        author: "", 
+        thumb: "", 
+        url: ""
+      }
+    };
+    
+    let current = 1;
+    let mode = 'acak';
+    const total = Object.keys(music).length;
+
+    const titleEl = document.getElementById('musicTitle');
+    const authorEl = document.getElementById('musicAuthor');
+    const thumbEl = document.getElementById('musicThumb');
+    const audioEl = document.getElementById('audioPlayer');
+    const playPause = document.getElementById('playPause');
+    const next = document.getElementById('next');
+    const prev = document.getElementById('prev');
+    const counterEl = document.getElementById('trackCounter');
+    const mode = document.getElementById('mode');
+    const titleWrapper = document.querySelector('.music-title-wrapper');
+
+    let scrollAnimation;
+
+    function loadTrack(index) {
+      const track = music[index];
+      if (!track) return;
+      titleEl.textContent = track.title;
+      authorEl.textContent = track.author;
+      thumbEl.src = track.thumb;
+      audioEl.src = track.url;
+      counterEl.textContent = `${index}/${total}`;
+
+      requestAnimationFrame(() => animateTitle());
+    }
+
+    function animateTitle() {
+      cancelAnimationFrame(scrollAnimation);
+      titleEl.style.transition = 'none';
+      titleEl.style.transform = 'translateX(0)';
+
+      const wrapperWidth = titleWrapper.offsetWidth;
+      const textWidth = titleEl.scrollWidth;
+
+      if (textWidth > wrapperWidth) {
+        setTimeout(() => {
+          const distance = textWidth - wrapperWidth;
+          titleEl.style.transition = `transform ${distance / 30}s linear`;
+          titleEl.style.transform = `translateX(-${distance}px)`;
+        }, 1500);
+      }
+    }
+
+    function playCurrent() {
+      loadTrack(current);
+      audioEl.play();
+      playPause.innerHTML = '<i class="fas fa-pause"></i>';
+    }
+    
+    function getNextIndex() {
+  if (mode === 'shuffle') {
+    let next;
+    do {
+      next = Math.floor(Math.random() * total) + 1;
+    } while (next === current);
+    return next;
+  } else {
+    return current + 1 > total ? 1 : current + 1;
+  }
+}
+
+function getPrevIndex() {
+  return current - 1 < 1 ? total : current - 1;
+}
+
+next.addEventListener('click', () => {
+  current = getNextIndex();
+  playCurrent();
+});
+
+prev.addEventListener('click', () => {
+  current = getPrevIndex();
+  playCurrent();
+});
+
+    playPause.addEventListener('click', () => {
+      if (audioEl.paused) {
+        audioEl.play();
+        playPause.innerHTML = '<i class="fas fa-pause"></i>';
+        animateTitle();
+      } else {
+        audioEl.pause();
+        playPause.innerHTML = '<i class="fas fa-play"></i>';
+        titleEl.style.transition = 'none';
+        titleEl.style.transform = 'translateX(0)';
+      }
+    });
+
+    audioEl.addEventListener('ended', () => {
+      if (mode === 'mengulang') {
+        audioEl.currentTime = 0;
+        audioEl.play();
+      } else {
+        next.click();
+      }
+    });
+
+    mode.addEventListener('click', () => {
+      if (mode === 'acak') {
+        mode = 'berurutan';
+        mode.innerHTML = '<i class="fas fa-list"></i>';
+      } else if (mode === 'berurutan') {
+        mode = 'mengulang';
+        mode.innerHTML = '<i class="fas fa-redo"></i>';
+      } else {
+        mode = 'acak';
+        mode.innerHTML = '<i class="fas fa-random"></i>';
+      }
+      showPopup('success', `Music akan dimainkan secara ${mode}`);
+    });
+
+    loadTrack(current);
+
+// AI CHAT
+const chatLog = document.getElementById('chatLog');
+const chatInput = document.getElementById('chatInput');
+const chatButton = document.getElementById('chatButton');
+const userName = 'guest';
+const imageInput = document.getElementById("imageInput");
+const imagePreview = document.getElementById("imagePreview");
+
+function getWIBTime() {
+  const jam = new Date().toLocaleTimeString("id-ID", {
+    timeZone: "Asia/Jakarta",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false
+  });
+  return jam;
+}
+
+function typeWriter(element, text, speed = 30) {
+  element.textContent = "";
+  let i = 0;
+  const interval = setInterval(() => {
+    element.textContent += text.charAt(i);
+    i++;
+    if (i >= text.length) clearInterval(interval);
+  }, speed);
+}
+
+let selectedImageBase64 = "";
+
+function disableChatInputs(disabled) {
+  chatButton.disabled = disabled;
+  imageInput.disabled = disabled;
+  document.querySelector('label[for="imageInput"]').style.pointerEvents = disabled ? 'none' : 'auto';
+  document.querySelector('label[for="imageInput"]').style.opacity = disabled ? 0.5 : 1;
+}
+
+function getWIBTime() {
+  return new Date().toLocaleTimeString("id-ID", {
+    timeZone: "Asia/Jakarta",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false
+  });
+}
+
+function addMessage(content, type, isStatic = false, isImage = false) {
+  const chatLog = document.getElementById('chatLog');
+  const messageDiv = document.createElement('div');
+  messageDiv.classList.add('message', type);
+  messageDiv.style.display = 'flex';
+  messageDiv.style.flexDirection = 'column';
+  messageDiv.style.alignItems = type === 'user' ? 'flex-end' : 'flex-start';
+
+  const bubble = document.createElement('div');
+  bubble.classList.add('bubble');
+  bubble.style.display = 'inline-block';
+  bubble.style.padding = '0.75rem 1rem';
+  bubble.style.borderRadius = '0.3rem';
+  bubble.style.marginBottom = '0.25rem';
+  bubble.style.maxWidth = '80%';
+  bubble.style.backgroundColor = type === 'user' ? '#469900' : '#2a2a2a';
+  bubble.style.color = '#fff';
+  bubble.style.border = type === 'ai' ? '1px solid #fff' : 'none';
+  bubble.style.wordBreak = 'break-word';
+
+if (type === 'user') {
+          bubble.appendChild(document.createTextNode(content));
+        }
+  if (isImage) {
+    const img = document.createElement('img');
+    img.src = content;
+    img.alt = "Image";
+    img.style.maxWidth = "100%";
+    img.style.borderRadius = "0.3rem";
+    bubble.appendChild(img);
+  } else if (type === 'ai' && !isStatic) {
+    if (content.includes('```')) {
+    const parts = content.split('```');
+    for (let i = 0; i < parts.length; i++) {
+      if (i % 2 === 0) {
+        const span = document.createElement('span');
+        typeWriter(span, parts[i]);
+        bubble.appendChild(span);
+      } else {
+        const langMatch = parts[i].match(/^(\w+)\n/);
+        const lang = langMatch ? langMatch[1] : 'markup';
+        const codeOnly = parts[i].replace(/^(\w+)\n/, '');
+
+        const pre = document.createElement('pre');
+        pre.className = 'code-block';
+        const codeEl = document.createElement('code');
+        codeEl.className = `language-${lang}`;
+        codeEl.textContent = codeOnly;
+        pre.appendChild(codeEl);
+
+        const copy = document.createElement('button');
+        copy.className = 'copy-';
+        copy.innerHTML = '<i class="fas fa-copy"></i>';
+        copy.onclick = () => {
+          navigator.clipboard.writeText(codeOnly);
+          copy.innerHTML = '<i class="fas fa-check"></i>';
+          setTimeout(() => {
+            copy.innerHTML = '<i class="fas fa-copy"></i>';
+          }, 1500);
+        };
+
+        pre.appendChild(copy);
+        bubble.appendChild(pre);
+        Prism.highlightElement(codeEl);
+      }
+    }
+    } else {
+      textSpan.textContent = content;
+    }
+    bubble.appendChild(textSpan);
+  }
+
+  const timeDiv = document.createElement('div');
+  timeDiv.className = 'chat-time';
+  timeDiv.textContent = getWIBTime();
+  timeDiv.style.fontSize = '0.75rem';
+  timeDiv.style.marginTop = '4px';
+  timeDiv.style.textAlign = 'right';
+  timeDiv.style.alignSelf = type === 'user' ? 'flex-end' : 'flex-start';
+
+  messageDiv.appendChild(bubble);
+  messageDiv.appendChild(timeDiv);
+  chatLog.appendChild(messageDiv);
+  chatLog.scrollTop = chatLog.scrollHeight;
+  return messageDiv;
+}
+
+async function sendMessage() {
+  const message = chatInput.value.trim();
+  if (!message && !selectedImageBase64) return showPopup('error', 'Masukkan pesan atau gambar');
+
+  disableChatInputs(true);
+
+  if (message) addMessage(message, 'user');
+  if (selectedImageBase64) addMessage(selectedImageBase64, 'user', false, true);
+
+  chatInput.value = '';
+  imagePreview.style.display = 'none';
+
+  const loadingMsg = addMessage('Furina sedang mengetik...', 'loading', true);
+  const bubble = loadingMsg.querySelector('.bubble');
+  const variants = ['Furina sedang mengetik.', 'Furina sedang mengetik..', 'Furina sedang mengetik...'];
+  let idx = 0;
+  const typingInterval = setInterval(() => {
+    bubble.textContent = variants[idx % variants.length];
+    idx++;
+  }, 1000);
+
+  try {
+    const query = `https://api.furinnteam.web.id/ai/furina?content=${encodeURIComponent(message)}&user=${encodeURIComponent(userName)}`;
+    const res = await fetch(query);
+    const data = await res.json();
+
+    clearInterval(typingInterval);
+    loadingMsg.remove();
+
+    addMessage(data.result.message, 'ai');
+    if (data.result.image) addMessage(data.result.image, 'ai', false, true);
+  } catch (err) {
+    clearInterval(typingInterval);
+    loadingMsg.remove();
+    addMessage('Terjadi kesalahan saat menghubungi AI. ' + err.message, 'error');
+    showPopup('error', 'Gagal menghubungi API');
+  } finally {
+    disableChatInputs(false);
+    selectedImageBase64 = "";
+    chatInput.focus();
+  }
+}
+
+chatInput.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' && !chatButton.disabled) {
+    e.preventDefault();
+    sendMessage();
+  }
+});
+
+imageInput.addEventListener("change", function () {
+  const file = this.files[0];
+  if (!file) return;
+  if (file.size > 4 * 1024 * 1024) return showPopup('error', 'Gambar terlalu besar (maks 4MB).');
+
+  const reader = new FileReader();
+  reader.onload = function (e) {
+    selectedImageBase64 = e.target.result;
+    imagePreview.src = selectedImageBase64;
+    imagePreview.style.display = 'block';
+  };
+  reader.readAsDataURL(file);
+});
+
+function enableResetButton() {
+  const reset = document.getElementById("resetChat");
+  reset.disabled = false;
+  reset.style.opacity = 1;
+  reset.style.pointerEvents = "auto";
+}
+
+function resetChat() {
+  closeConfirmModal(); 
+  const chatLog = document.getElementById('chatLog');
+  chatLog.innerHTML = '';
+  showPopup('success', 'Sesi chat berhasil dihapus.');
+  setTimeout(() => {
+    addMessage("Hai, memulai ombrolan baruu? Tentu Furina yg bakal mulai duluan 🤭", "ai");
+  }, 500);
+}
+
+function updateDateTime() {
+  const now = new Date();
+  const dateStr = now.toLocaleDateString('id-ID');
+  const timeStr = now.toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+
+  document.getElementById("dateDisplay").textContent = `Date: ${dateStr}`;
+  document.getElementById("timeDisplay").textContent = `Timw: ${timeStr}`;
+}
+setInterval(updateDateTime, 1000);
+updateDateTime();
+
+function confirmResetChat() {
+  document.getElementById("confirmResetModal").classList.remove("hidden");
+}
+
+function closeConfirmModal() {
+  document.getElementById("confirmResetModal").classList.add("hidden");
+}
+
+//NOTIP
+function showPopup(type, message) {
+  const container = document.getElementById("popupContainer");
+  const popup = document.createElement("div");
+  popup.className = `popup ${type}`;
+
+  let iconClass = '';
+  if (type === 'error') iconClass = 'fas fa-times-circle';
+  else if (type === 'success') iconClass = 'fas fa-check-circle';
+  else iconClass = 'fas fa-info-circle';
+
+  popup.innerHTML = `<i class="${iconClass}"></i> ${message}`;
+
+  container.appendChild(popup);
+  setTimeout(() => popup.remove(), 3000);
+}
+
+// WELCOME
+setTimeout(() => {
+  const el = document.getElementById('welcome-alert');
+  if (el) el.remove();
+}, 5000);
+  
+  setTimeout(() => {
+    const overlay = document.getElementById('loading-overlay');
+    if (overlay) overlay.remove();
+    document.body.style.overflow = '';
+  }, 3000);
+  
+document.addEventListener("DOMContentLoaded", () => {
+  const welcomeModal = document.getElementById('loading-overlay');
+
+  if (welcomeModal) {
+    setTimeout(() => {
+      if (document.documentElement.requestFullscreen) {
+        document.documentElement.requestFullscreen();
+      } else if (document.documentElement.webkitRequestFullscreen) {
+        document.documentElement.webkitRequestFullscreen();
+      } else if (document.documentElement.msRequestFullscreen) {
+        document.documentElement.msRequestFullscreen();
+      }
+    }, 5000);
+  }
+});
+
+
+// scrollTop
+    const scrollTop = document.getElementById('scrollTop');
+
+    window.addEventListener('scroll', () =>
+{
+      if (window.scrollY >
+300) {
+        scrollTop.style.display = 'block';
+      } else {
+        scrollTop.style.display = 'none';
+      }
+    });
+
+document.body.style.overflow = 'hidden';
+
+    scrollTop.addEventListener('click', () =>
+{
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+</body>
+</html>
